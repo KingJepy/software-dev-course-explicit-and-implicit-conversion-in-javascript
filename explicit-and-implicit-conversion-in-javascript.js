@@ -18,15 +18,27 @@ Use console.log() to clearly show the before-and-after type conversions.
 
 */
 
-
+// this code works as youd expect
 let result = "5" - 2;
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+//change the boolean from "False" to "Hello!" so the boolean returns true
+let isValid = Boolean("Hello!");
 if (isValid) {
     console.log("This is valid!");
 }
 
 let age = "25";
-let totalAge = age + 5;
+// convert the string to a number so that the + function works properly and actually adds the numbers
+let ageAsNumber = Number(age)
+let totalAge = ageAsNumber + 5;
 console.log("Total Age: " + totalAge);
+
+// Lets show explicit conversion by taking a string and turning it into a float
+let length = "45.25 meters"
+// converts the string to a float and drops the text off the end
+console.log(parseFloat(length))
+
+// shows implicit conversion since I am taking the variable NaN as a boolean to return False
+let notTrue = Boolean(NaN)
+console.log(notTrue)
